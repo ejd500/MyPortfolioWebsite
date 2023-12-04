@@ -2,6 +2,8 @@ import image1 from "../Images/image1.png"
 import "../styles/home.css"
 import PrimaryButton from "./PrimaryButton"
 import SecondaryButton from "./SecondaryButton"
+import {Link} from "react-router-dom"
+import Nav from "./Nav"
 
 const Home = () => {
   return (
@@ -17,7 +19,7 @@ const Home = () => {
                 the links below.
             </p>
             <div id="buttons">
-                <PrimaryButton text="About" color="white" backgroundColor="#2C3261"/>
+                <Link to="/about"><PrimaryButton text="About" color="white" backgroundColor="#2C3261"/></Link>
                 <SecondaryButton text="Projects" backgroundColor="white" color="#2C3261"/>
                 <PrimaryButton text="Contact" backgroundColor="#2C3261" color="white"/>
             </div>

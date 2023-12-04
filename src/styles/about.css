@@ -1,0 +1,42 @@
+#aboutme{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+    /* text-align: center; */
+    font-size: 48px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    
+}
+.emptybox{
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #25282B;
+}
+#aboutme p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    color: #828282;
+    max-width: 1195px;
+    margin: 40px;
+}
+table{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    color: #828282;
+    margin: 40px;
+}
+td{
+    text-align: center;
+    padding: 10px 50px;
+}
+
+
+
+

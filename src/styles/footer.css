@@ -1,0 +1,20 @@
+#footer{
+    background-image: url(../Images/footerImage.png);
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 50px;
+    color: #25282B;
+}
+#copyright{
+    margin-top: 8px;
+    color: #828282;
+}

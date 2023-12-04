@@ -1,0 +1,29 @@
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+    height: 100px;
+    align-items: center;
+}
+#logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 36pt;
+    color: #25282B;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    width: 384px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
+}
+.nav-link{
+    text-decoration: none;
+    color: #25282B;
+}
+.nav-link:hover{
+    border-bottom: 2px solid black;
+}
+
