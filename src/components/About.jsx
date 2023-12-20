@@ -1,9 +1,20 @@
 import Nav from "./Nav"
 import "../styles/about.css"
-import PrimaryButton from "./PrimaryButton";
 import Footer from "./Footer";
+import { useEffect } from "react";
+import SkillsCard from "./SkillsCard";
 
 const About = () => {
+
+    const resumePath = process.env.PUBLIC_URL + '/Documents/Resume.pdf';
+
+    useEffect(() => {
+        // Scroll to the top of the page when the component mounts
+        window.scrollTo({
+            top: 0
+        });
+    }, []);
+
   return (
     <div>
         <Nav />
@@ -25,30 +36,16 @@ const About = () => {
             browse my projects, review my resume, and contact me with any
             questions you might have. I look forward to connecting!
             </p>
-            <PrimaryButton text="Resume" backgroundColor="#2C3261" color="white"/>
+            <a href={resumePath} download="ellendalton_resume.pdf"><button id="resume-button">Resume</button></a>
             <h1>Skills</h1>
             <div className="emptybox"></div>
-            <table>
-                <tr>
-                    <td>HTML</td>
-                    <td>JavaScript</td>
-                    <td>CSS</td>
-                </tr>
-                <tr>
-                    <td>GitHub</td>
-                    <td>React</td>
-                    <td>Python</td>
-                </tr>
-                <tr>
-                    <td>Figma</td>
-                    <td></td>
-                    <td>Framer</td>
-                </tr>
-            </table>
-
+            <SkillsCard title="Coding Skills" skill1="HTML" skill2="JavaScript" skill3="CSS" skill4="GitHub" skill5="React" skill6="Python" skill7="Figma" skill8="" skill9="Framer"/>
+            <SkillsCard title="Transferable Skills" skill1="Conflict Resolution" skill2="Attention to Detail" skill3="Boundary Setting" skill4="Active Listening" skill5="Critical Thinking" skill6="Problem Solving" skill7="Good Communication" skill8="Works well independently and with others" skill9="Organization"/>
+       
         </div>
         <Footer/>
     </div>
+
   );
 }
 

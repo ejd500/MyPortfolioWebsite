@@ -4,8 +4,19 @@ import PrimaryButton from "./PrimaryButton"
 import SecondaryButton from "./SecondaryButton"
 import {Link} from "react-router-dom"
 import Nav from "./Nav"
+import { useEffect } from "react"
+import Footer from "./Footer"
 
 const Home = () => {
+
+    useEffect(() => {
+        // Scroll to the top of the page when the component mounts
+        window.scrollTo({
+          top: 0
+        });
+      }, []);  
+
+
   return (
     <div className="homepage">
 
@@ -20,8 +31,8 @@ const Home = () => {
             </p>
             <div id="buttons">
                 <Link to="/about"><PrimaryButton text="About" color="white" backgroundColor="#2C3261"/></Link>
-                <SecondaryButton text="Projects" backgroundColor="white" color="#2C3261"/>
-                <PrimaryButton text="Contact" backgroundColor="#2C3261" color="white"/>
+                <Link to="/projects"><SecondaryButton text="Projects" backgroundColor="white" color="#2C3261"/></Link>
+                <Link to="/contact"><PrimaryButton text="Contact" backgroundColor="#2C3261" color="white"/></Link>
             </div>
         </div>
         <div id="profilepicbox">
